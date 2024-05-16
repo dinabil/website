@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('m3.jpeg');
+           
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 3px solid rgba(134, 10, 10, 0.921);
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgb(242, 234, 234);
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .container form input[type="text"],
+        .container form input[type="password"] {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .container form input[type="submit"] {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form onsubmit="location.href='home.html'" id="signInForm">
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password" >Mot de passe :</label>
+            <input type="checkbox" id="togglePassword"> Afficher le mot de passe
+
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Sign In">
+        </form>
+    </div>
+    <script>
+        document.getElementById('togglePassword').addEventListener('change', function() {
+            var passwordField = document.getElementById('password');
+            if (this.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        });</script>
+    <script>
+        document.getElementById("signInForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if ((email.includes("@exemple.com") || email.includes("@gmail.com")) && password === "motdepasse") {
+                console.log("Connexion réussie !");
+            
+                window.location.href = "home3.html";
+            } else {
+                alert("Adresse e-mail ou mot de passe incorrect.");
+            }
+        });
+    </script>
+</body>
+</html>

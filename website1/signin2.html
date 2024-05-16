@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUX MOTO DR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('m5.jpeg');
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .container form input[type="text"],
+        .container form input[type="number"],
+        .container form input[type="password"] {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .container form input[type="submit"] {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>LUX MOTO DR</h2>
+        <form onsubmit="location.href='login.html'" id="rentalForm">
+            <label for="name">Nom complet :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="phone">Numéro de téléphone :</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="duration">Durée de la location (en jours) :</label>
+            <input type="number" id="duration" name="duration" required>
+
+            <input  type="submit" value="Louer">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("rentalForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var phone = document.getElementById("phone").value;
+            var duration = document.getElementById("duration").value;
+
+            if (name && email && password && phone && duration) {
+               alert("Formulaire soumis avec succès !");
+         window.location.href = "home.html";
+} else {
+                alert("Veuillez remplir tous les champs.");
+            }
+        });
+    </script>
+</body>
+</html>

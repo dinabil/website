@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Location de Motos</title>
+    <style>    
+.louer-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: blue;
+    color: white;
+    text-decoration: none; 
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; 
+}
+.louer-link:hover {
+    background-color: darkblue;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .product p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .contact-list {
+            display : none ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Location de Motos</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#" onclick="toggleContacts()">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="contact-list" id="contactList">
+        <p>Numéro de contact 1 : 0612345678</p>
+        <p>Numéro de contact 2 : 0798765432</p>
+        <p>Numéro de contact 3 : 0524356897</p>
+       
+    </div>
+
+    <script>
+        function toggleContacts() {
+            var contactList = document.getElementById("contactList");
+            if (contactList.style.display === "none") {
+                contactList.style.display = "block";
+            } else {
+                contactList.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+    <div class="product-list">
+        <div class="product">
+            <img src="swing .png" alt="Produit 1">
+            <h2>Produit 1 :</h2>
+            <p>SWING 49 </p>
+            <p>Modèle :2015 <p>
+            <p>Prix : 20€/jour</p>
+            <a href="signin2.html" class="louer-link">louer</a>
+        </div>
+        <div class="product">
+            <img src="stunt.jpeg" alt="Produit 2">
+            <h2>Produit 2 :</h2>
+            <p>STUNT 49 </p>
+            <p>Modèle :2018 <p>
+            <p>Prix : 25€/jour</p>
+            <a href="signin2.html" class="louer-link">louer</a>
+        </div>
+        <div class="product">
+            <img src="sh.jpeg" alt="Produit 3">
+            <h2>Produit 3 :</h2>
+            </p>SH </p>
+            <p>Modèle :2021<p>
+            <p>Prix : 40€/jour</p>
+            <a href="signin2.html" class="louer-link">louer</a>
+        </div>
+        <div class="product">
+            <img src="tmax.jpeg" alt="Produit 4">
+            <h2>Produit 4 :</h2>
+            </p>TMAX 560</p>
+            <p>Modèle :2024 <p>
+            <p>Prix : 60€/jour</p>
+            <a href="signin2.html" class="louer-link">louer</a>
+        </div>
+        <div class="product">
+            <img src="xadv.jpeg" alt="Produit 5">
+            <h2>Produit 5 :</h2>
+            </p>XADV 750</p>
+            <p>Modèle :2024<p>
+            <p>Prix : 65€/jour</p>
+            <a href="signin2.html" class="louer-link">louer</a>
+        </div>
+        <div class="product">
+            <img src="z900.webp" alt="Produit 6">
+            <h2>Produit 6 :</h2>
+            </p>Z 900</p>
+            <p>Modèle :2021<p>
+            <p>Prix : 70€/jour</p>
+            <a href="signin2.html" class="louer-link">louer</a>
+        </div>
+        <div class="product">
+            <img src="gs.jpeg" alt="Produit 7">
+            <h2>Produit 7 :</h2>
+            </p>GS 1250 </p>
+            <p>Modèle :2022<p>
+            <p>Prix : 80€/jour</p>
+            <a href="signin2.html" class="louer-link">louer</a>
+        </div>
+        <div class="product">
+            <img src="ktm.jpeg " alt="Produit 8">
+            <h2>Produit 8 :</h2>
+            </p>KTM 1290 </p>
+            <p>Modèle :2023<p>
+            <p>Prix : 90€/jour</p>
+            <a href="signin2.html" class="louer-link">louer</a>
+        </div>
+
+    </div>
+    <footer>
+        <p>&copy;de 2004 à 2024.Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
